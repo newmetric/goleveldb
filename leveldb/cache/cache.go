@@ -324,8 +324,8 @@ func (h *mHead) enumerateNodesWithCB(f func([]*Node)) {
 		b.mu.Lock()
 		nodes = append(nodes, b.nodes...)
 		b.mu.Unlock()
-		f(nodes)
 	}
+	f(nodes)
 }
 
 func (h *mHead) enumerateNodesByNS(ns uint64) []*Node {
